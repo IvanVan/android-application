@@ -63,5 +63,4 @@ dependencies {
     implementation 'com.crashlytics.sdk.android:crashlytics:2.9.8'
     def appCenterSdkVersion = '1.11.2'
     implementation "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
-    implementation "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
 }
