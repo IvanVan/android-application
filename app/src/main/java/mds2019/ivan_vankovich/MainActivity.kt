@@ -10,7 +10,7 @@ import com.microsoft.appcenter.crashes.Crashes;
 
 class MainActivity : AppCompatActivity() {
 
-    val APP_KEY : String = "ccce248b-8f79-4637-bf10-d5a5d51db628"
+    private val APP_KEY : String = "ccce248b-8f79-4637-bf10-d5a5d51db628"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
