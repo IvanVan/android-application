@@ -34,3 +34,21 @@ jobs:
     - store_artifacts: # for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
         path: app/build/outputs/apk
         destination: release
+    - run:
+        name: Build
+        command: ./gradlew assembleRelease
+    - store_artifacts: # for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
+        path: app/build/outputs/apk
+        destination: release
+    - run:
+        name: Build
+        command: ./gradlew assembleRelease
+    - store_artifacts: # for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
+        path: app/build/outputs/apk
+        destination: release
+    - deploy:
+        name: Deploy APK.
+        command: |
+          if [ "${CIRCLE_BRANCH}" != "master" ]; then
+            bash ./scripts/deploy-fabric.sh
+          fi
